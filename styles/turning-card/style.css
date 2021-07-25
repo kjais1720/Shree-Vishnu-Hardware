@@ -1,0 +1,56 @@
+*,*::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: all ease 2s;
+    color: #fff;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+}
+
+.card-container{
+    position: relative;
+}
+
+.card-container .card{
+    height: 400px;
+    width: 400px;
+    background-image: url("https://picsum.photos/id/431/600/400");
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 30px 30px 20px 0px rgba(0,0,0,0.8);
+
+}
+
+.card p{
+    
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+.card h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.card.active h1{
+    top: 35%;
+}
+
+.card.active p{
+    transform : rotateX(0deg)
+}

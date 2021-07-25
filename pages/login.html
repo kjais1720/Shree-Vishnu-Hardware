@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Vishnu Hardware | Login</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="carousel/carousel.css">
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav nav_top">
+            <a href="../index.html">
+                <div class="logo"><img src="../images/logo-crop.png" alt=""><div>SVH <p>Estd. 1989</p></div>
+                </div>
+            </a>
+        
+            <ul class="nav-side">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="locate.html">Locate Store</a></li>
+                <li><a href="login.html" class="cta-nav login">Login</a></li>
+                <li><a href="signup.html" class="cta cta-nav sign-up">Sign Up</a></li>
+            </ul>
+
+            <div id="nav-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <img src='../images/undraw_secure_login_pdn4.svg' alt="A man opening a door" class="login-icon">
+            <div class="toggle">
+                <button class="in toggle-btn btn-focus">Login</button>
+                <button class="up toggle-btn">Sign-Up</button>
+            </div>
+            <form class="form" id="login" action="../index.html" method="post">
+                <p>Login with</p>
+                <button class="social-btn"><i class="fab fa-facebook"></i></button>
+                <button class="social-btn"><i class="fab fa-twitter"></i></button>
+                <button class="social-btn"><i class="fab fa-google"></i></button>
+                <p>or</p>
+
+                <div class="form-control">
+                    <input id="email" type="email" required autofocus>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-control">
+                    <input id="password" type="Password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <p><a href="#">Forgot password?</a></p>
+                <button type="submit" class="btn btn-focus">Login</button>
+            </form>
+
+
+            <form action='../index.html' name="sign-up" class="form hidden" id="signup" action="index.html" method="post">
+
+                <p>Sign-Up with</p>
+                <button class="social-btn"><i class="fab fa-facebook"></i></button>
+                <button class="social-btn"><i class="fab fa-twitter"></i></button>
+                <button class="social-btn"><i class="fab fa-google"></i></button>
+                <p>or</p>
+
+                <div class="form-control">
+                    <input id="name" name="Full Name" type="text" required autofocus>
+                    <label for="name">Full Name</label>
+                </div>
+                <span id="errorname"></span>
+                <div class="form-control">
+                    <input name="Email" id="email" type="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <span id="erroremail"></span>
+                <div class="form-control">
+                    <input name='Password' id="password" type="Password" required>
+                    <label for="password">Password</label>
+                </div>
+                <span id="errorpassword"></span>
+                <div class="form-control">
+                    <input name="confPassword" id="re-password" type="Password" required>
+                    <label for="password">Confirm password</label>
+                </div>
+
+                <button type="submit" class="btn btn-focus">Sign-Up</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const labels=document.querySelectorAll(".form-control label")
+
+        labels.forEach(label =>{
+            label.innerHTML = label.innerText
+                    .split('')
+                    .map((letter,idx) => `<span style="transition-delay:${idx * 50}ms;">${letter}</span>`)
+                    .join('');
+            })
+
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+    <!-- <script src="../index.js"></script> -->
+    <script src="./scripts/login.js"></script>
+</body>
+</html>

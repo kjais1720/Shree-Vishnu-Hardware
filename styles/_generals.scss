@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&family=Playfair+Display&display=swap');
+@import 'mediaQ';
+@import 'variables';
+
+
+@mixin text-gradient{
+    
+    background-color: $primaryColor;
+    background-image: linear-gradient(45deg, $secondaryColor, $primaryColor);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+}
+
+@mixin nav-link(){
+    font-weight: bold;
+    text-decoration: none;
+    color: $secondaryColor;
+
+    &:hover{
+        padding-bottom: 5px;
+        border-bottom: solid 3px $secondaryColor;
+    }
+}
+
+@mixin centring-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin background($id) {
+    background-image: url("https://picsum.photos/id/"+$id+"/600/400");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin overlay($color){
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: $color;
+    opacity: 0.6;
+}
+
+@mixin glassmorphism {
+    background: rgba(255,255,255,0.2) ;
+    backdrop-filter: blur(5px);
+}
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: ease 0.3s;
+}
+
+body{
+    // background: $primaryColor;
+    color: $tertiaryColor;
+    font-family: 'Raleway', sans-serif;
+    overflow-x: hidden;
+}
+
+h2{
+    text-align: center;
+    font-size: $h2;
+    color: $tertiaryColor;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+    ::-webkit-scrollbar-track {
+    background-color: transparent;
+    box-shadow: inset $box-shadow;
+    // border-radius: 10px;
+  }
+    ::-webkit-scrollbar-thumb {
+        background-image: linear-gradient($primaryColor, $secondaryColor); 
+        // border-radius:10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-image: linear-gradient($secondaryColor, $primaryColor); 
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.8);
+    // background: #555; 
+  } 
+
+.cta{
+    text-decoration: none;
+    color: $tertiaryColor;
+    padding: 1rem;
+    border-radius: 20px;
+    background-image: linear-gradient(90deg, $secondaryColor, $primaryColor);
+    cursor: pointer;
+    transition: background-image ease 1s;
+    &:hover{
+        background-image: linear-gradient(90deg, $primaryColor, $secondaryColor);
+        transform: scale(0.98);
+    }
+
+    position: relative;
+    z-index: 90;
+    box-shadow: $box-shadow;
+}
+
+section{
+    min-height: 80vh;
+    border-radius : 0px 100px 0px 100px
+}
+
+a{
+    text-decoration: none;
+}
