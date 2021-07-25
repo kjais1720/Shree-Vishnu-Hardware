@@ -1,0 +1,182 @@
+@import '../../styles/generals';
+
+body{
+    background: linear-gradient(45deg, $secondaryColor, $primaryColor);
+    min-height: 100vh;
+}
+
+.container{
+    background-color: white;
+    padding: 20px 40px;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 10vh auto;
+    transform: translateX(40%);
+    color: $primaryColor;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+
+    &:hover{
+        box-shadow: 20px 20px 5px rgba(0,0,0,0.5);
+
+        img.login-icon{
+            box-shadow: -5px 20px 5px 0 rgba(0,0,0,0.5);
+        }
+    }
+
+    img.login-icon{
+        width: 80%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -75%;
+        @include glassmorphism;
+        border-radius: 10px 0 0 10px;
+
+        box-shadow: -5px 10px 5px 0 rgba(0,0,0,0.5);
+    }
+
+    .toggle{
+        display: flex;
+        margin: 20px auto;
+        justify-content: center;
+        
+        .toggle-btn{
+            // font-size: 1rem;
+            border: none;
+            color: $primaryColor;
+            background: $tertiaryColor;
+        }
+        
+        .in{
+            padding: 10px;
+            border-radius: 20px 0 0 20px;            
+        }
+        
+        .up{
+            padding: 10px;
+            border-radius: 0 20px 20px 0;
+        }
+        .btn-focus{
+            background: linear-gradient(45deg, $secondaryColor, $primaryColor);
+            color: $tertiaryColor;
+        }
+    }
+
+    .social-btn{
+        border: none;
+        background: none;
+        margin: 20px 10px;
+        
+        .fab{
+            font-size: 1.2rem;
+            color: $secondaryColor;
+            cursor: pointer;
+
+            &:hover{
+                color: $primaryColor;
+            }
+        }
+
+    }
+
+
+    .form-control{
+        position: relative;
+        margin-top: 40px;
+    }
+
+    form input{
+        margin: 25px auto;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 2px $secondaryColor;
+        display: block;
+        width: 100%;
+        padding: 15px 0 0;
+        color: $secondaryColor;
+        transition: ease 0.5s;
+    }
+
+        .form-control input:focus,
+        .form-control input:valid{
+            outline: 0;
+            border-bottom-color: $primaryColor;
+        }
+
+    button.btn{
+        margin-top: 15px;
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+        background-color: $primaryColor;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: $tertiaryColor;
+        font-weight: bold;
+        transition: ease 0.1s;
+        margin: 5px;
+    }
+
+        .btn:active, .btn:focus{
+            transform: scale(0.98);
+            margin: 0; 
+            border: solid 5px rgba(255,255,255,0.5);
+        }
+
+    p a{
+        text-decoration: none;
+        color: $primaryColor;
+
+            &:hover{
+                text-decoration: underline;
+            }
+    }
+    .form-control label{
+        position: absolute;
+        top: 10px;
+        left: 0;
+    
+        span{
+            color: $secondaryColor;
+            display: inline-block;
+            font-size: 18px;
+            min-width: 5px;
+            position: relative;
+            transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) .5s;
+        }
+
+        
+    }
+    input:focus + label span,
+    input:valid + label span{
+        color: $primaryColor;
+        transform: translateY(-20px);
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    @include mq(mobile){
+        transform: translateX(0);
+
+        img.login-icon{
+            position: relative;
+            top: unset;
+            left: unset;
+            width: 100%;
+            background: none ;
+            box-shadow: none;
+        }
+
+        &:hover{
+            img.login-icon{
+                box-shadow: none;
+            }
+        }
+    }
+}

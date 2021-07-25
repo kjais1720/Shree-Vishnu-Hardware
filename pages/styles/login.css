@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;1,300&family=Playfair+Display&display=swap");
+/* Media Queries */
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+}
+
+body {
+  color: #d9d9d9;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #d9d9d9;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  -webkit-box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0f1657), to(teal));
+  background-image: linear-gradient(#0f1657, teal);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(teal), to(#0f1657));
+  background-image: linear-gradient(teal, #0f1657);
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+}
+
+.cta {
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 1rem;
+  border-radius: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(teal), to(#0f1657));
+  background-image: linear-gradient(90deg, teal, #0f1657);
+  cursor: pointer;
+  -webkit-transition: background-image ease 1s;
+  transition: background-image ease 1s;
+  position: relative;
+  z-index: 90;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.cta:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0f1657), to(teal));
+  background-image: linear-gradient(90deg, #0f1657, teal);
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+
+section {
+  min-height: 80vh;
+  border-radius: 0px 100px 0px 100px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(45deg, teal, #0f1657);
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 20px 40px;
+  position: relative;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  margin: 10vh auto;
+  -webkit-transform: translateX(40%);
+          transform: translateX(40%);
+  color: #0f1657;
+  -webkit-box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover {
+  -webkit-box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover img.login-icon {
+  -webkit-box-shadow: -5px 20px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: -5px 20px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container img.login-icon {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -75%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px 0 0 10px;
+  -webkit-box-shadow: -5px 10px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: -5px 10px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.container .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 20px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .toggle .toggle-btn {
+  border: none;
+  color: #0f1657;
+  background: #d9d9d9;
+}
+
+.container .toggle .in {
+  padding: 10px;
+  border-radius: 20px 0 0 20px;
+}
+
+.container .toggle .up {
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+}
+
+.container .toggle .btn-focus {
+  background: linear-gradient(45deg, teal, #0f1657);
+  color: #d9d9d9;
+}
+
+.container .social-btn {
+  border: none;
+  background: none;
+  margin: 20px 10px;
+}
+
+.container .social-btn .fab {
+  font-size: 1.2rem;
+  color: teal;
+  cursor: pointer;
+}
+
+.container .social-btn .fab:hover {
+  color: #0f1657;
+}
+
+.container .form-control {
+  position: relative;
+  margin-top: 40px;
+}
+
+.container form input {
+  margin: 25px auto;
+  background-color: transparent;
+  border: none;
+  border-bottom: solid 2px teal;
+  display: block;
+  width: 100%;
+  padding: 15px 0 0;
+  color: teal;
+  -webkit-transition: ease 0.5s;
+  transition: ease 0.5s;
+}
+
+.container .form-control input:focus,
+.container .form-control input:valid {
+  outline: 0;
+  border-bottom-color: #0f1657;
+}
+
+.container button.btn {
+  margin-top: 15px;
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  background-color: #0f1657;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: #d9d9d9;
+  font-weight: bold;
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+  margin: 5px;
+}
+
+.container .btn:active, .container .btn:focus {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  margin: 0;
+  border: solid 5px rgba(255, 255, 255, 0.5);
+}
+
+.container p a {
+  text-decoration: none;
+  color: #0f1657;
+}
+
+.container p a:hover {
+  text-decoration: underline;
+}
+
+.container .form-control label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
+.container .form-control label span {
+  color: teal;
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  position: relative;
+  -webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
+  transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.5s;
+}
+
+.container input:focus + label span,
+.container input:valid + label span {
+  color: #0f1657;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.container .hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 764px) {
+  .container {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .container img.login-icon {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 100%;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .container:hover img.login-icon {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+/*# sourceMappingURL=login.css.map */
